@@ -1,23 +1,22 @@
 """Пакет algopack - алгоритмический мини-пакет."""
 
-from .errors import (
-    AlgoPackError, 
-    EmptyStructureError, 
-    InvalidTypeError, 
-    InvalidInputError,
-)
-from .recurrence import fast_pow_recursive, fast_pow_iterative
-from .sorting import bubble_sort, merge_sort
+from .benchmark import run_benchmark
 from .datastructs import Stack
+from .errors import (
+    AlgoPackError,
+    EmptyStructureError,
+    InvalidInputError,
+    InvalidTypeError,
+)
 from .generators import (
     generate_duplicates,
-    generate_nearly_sorted, 
-    generate_reversed, 
-    generate_random, 
+    generate_nearly_sorted,
+    generate_random,
+    generate_reversed,
     generate_sorted,
 )
-from .benchmark import run_benchmark
-
+from .recurrence import fast_pow_iterative, fast_pow_recursive
+from .sorting import bubble_sort, merge_sort
 
 __all__ = [
     "AlgoPackError",

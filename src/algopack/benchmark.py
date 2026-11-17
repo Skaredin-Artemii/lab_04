@@ -1,8 +1,9 @@
 """Модуль для бенчмарка сортировок."""
 
 import time
-from typing import Callable
-from . import sorting, generators
+from collections.abc import Callable
+
+from . import generators, sorting
 
 
 def _measure_time(func: Callable, arr: list, repeats: int) -> float:
@@ -39,7 +40,7 @@ def run_benchmark(repeats: int = 5) -> None:
     print("|   Алгоритм   | Размер | Тип массива | Время (сек) |")
     print("|--------------|--------|-------------|-------------|")
     for gen_name, gen_func in gens:
-        for size in [100000, 1000000, 10000000]:
+        for size in [100000, 1000000]:
             arr = gen_func(size, seed=42)
             m_time = _measure_time(sorting.merge_sort, arr, repeats)
             print(f"| Merge  Sort | {size} | {gen_name} | {m_time:.5f} |")
