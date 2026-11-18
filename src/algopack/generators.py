@@ -1,6 +1,7 @@
 """Генераторы тестовых наборов данных."""
 
 import random
+
 from .errors import InvalidInputError, InvalidTypeError
 
 

@@ -1,6 +1,7 @@
 """Тестирование реализованной структуры данных (Stack)."""
 
 import pytest
+
 from algopack.datastructs import Stack
 from algopack.errors import EmptyStructureError
 

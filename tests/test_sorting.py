@@ -1,16 +1,17 @@
 """Тесты сортировок."""
 
 import pytest
-from algopack.sorting import bubble_sort, merge_sort
+
 from algopack.errors import InvalidTypeError
 from algopack.generators import generate_random
+from algopack.sorting import bubble_sort, merge_sort
 
 SORT_FUNCS = [bubble_sort, merge_sort]
 
 def test_sorting_correctness():
     """Тест на корректную сортировку."""
     cases = [ ([], []), ([42], [42]), ([1, 2, 3], [1, 2, 3]),
-    ([5, 1, 4, 2], [1, 2, 4, 5]), ([3, 1, 3, 2], [3, 1, 3, 2]), 
+    ([5, 1, 4, 2], [1, 2, 4, 5]), ([3, 1, 3, 2], [1, 2, 3, 3]), 
     ([-1, -5, 0, 2], [-5, -1, 0, 2]) ]
     for func in SORT_FUNCS:
         for arr, expected in cases:

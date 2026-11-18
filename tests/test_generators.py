@@ -2,14 +2,14 @@
 
 import pytest
 
-from algopack.generators import (
-    generate_random,
-    generate_sorted,
-    generate_reversed,
-    generate_nearly_sorted,
-    generate_duplicates,
-)
 from algopack.errors import InvalidInputError, InvalidTypeError
+from algopack.generators import (
+    generate_duplicates,
+    generate_nearly_sorted,
+    generate_random,
+    generate_reversed,
+    generate_sorted,
+)
 
 ALL_GENS = [
     generate_random,

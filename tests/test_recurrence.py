@@ -1,8 +1,9 @@
 """Тесты рекуррентной задачи."""
 
 import pytest
-from algopack.recurrence import fast_pow_iterative, fast_pow_recursive
+
 from algopack.errors import InvalidInputError
+from algopack.recurrence import fast_pow_iterative, fast_pow_recursive
 
 POW_FUNCS = [fast_pow_recursive, fast_pow_iterative]
 
@@ -37,9 +38,9 @@ def test_pow_negative_base():
 def test_pow_float_base():
     """Тест на дробное основание."""
     for func in POW_FUNCS:
-        assert func(2.5, 2) == 6.25
-        assert func(5.5, 4) == 915.0625
-        assert func(0.025, 2) == 0.000625
+        assert func(2.5, 2) == pytest.approx(6.25)
+        assert func(5.5, 4) == pytest.approx(915.0625)
+        assert func(0.025, 2) == pytest.approx(0.000625)
 
 
 def test_pow_large_exponent():
