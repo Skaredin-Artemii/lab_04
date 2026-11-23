@@ -1,4 +1,4 @@
-"""Пакет algopack - алгоритмический мини-пакет."""
+"""Пакет algorithmic_package - алгоритмический мини-пакет."""
 
 from .benchmark import run_benchmark
 from .datastructs import Stack

@@ -2,8 +2,8 @@
 
 import pytest
 
-from algopack.errors import InvalidInputError
-from algopack.recurrence import fast_pow_iterative, fast_pow_recursive
+from algorithmic_package.errors import InvalidInputError
+from algorithmic_package.recurrence import fast_pow_iterative, fast_pow_recursive
 
 POW_FUNCS = [fast_pow_recursive, fast_pow_iterative]
 

@@ -2,8 +2,8 @@
 
 import pytest
 
-from algopack.datastructs import Stack
-from algopack.errors import EmptyStructureError
+from algorithmic_package.datastructs import Stack
+from algorithmic_package.errors import EmptyStructureError
 
 
 def test_stack_new_is_empty():

@@ -2,9 +2,9 @@
 
 import pytest
 
-from algopack.errors import InvalidTypeError
-from algopack.generators import generate_random
-from algopack.sorting import bubble_sort, merge_sort
+from algorithmic_package.errors import InvalidTypeError
+from algorithmic_package.generators import generate_random
+from algorithmic_package.sorting import bubble_sort, merge_sort
 
 SORT_FUNCS = [bubble_sort, merge_sort]
 

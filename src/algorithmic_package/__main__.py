@@ -1,4 +1,4 @@
-"""Демонстрация и запуск бенчмарка пакета algopack."""
+"""Демонстрация и запуск бенчмарка пакета algorithmic_package."""
 
 from .benchmark import run_benchmark
 from .datastructs import Stack

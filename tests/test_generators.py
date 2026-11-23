@@ -2,8 +2,8 @@
 
 import pytest
 
-from algopack.errors import InvalidInputError, InvalidTypeError
-from algopack.generators import (
+from algorithmic_package.errors import InvalidInputError, InvalidTypeError
+from algorithmic_package.generators import (
     generate_duplicates,
     generate_nearly_sorted,
     generate_random,
