@@ -43,6 +43,57 @@ python -m algorithmic_package
 - Методика: выполняется 5 повторов. Генерация входного массива происходит до старта таймера и не входит в замер. Для каждого запуска создается независимая копия массива, чтобы алгоритм не сортировал уже отсортированные данные. Время замеряется через time.perf_counter().
 - Результаты: на 10 000 элементов Bubble Sort работает около 6 секунд, а Merge Sort — доли секунды. На 1 000 000 элементов Bubble Sort не запускался (из-за слишком долгого времени), а Merge Sort справился за ~4 секунды. Это наглядно подтверждает сложность O(n log n) у слияния и O(n^2) у пузырька.
 
+## Результаты бенчмарка сортировок (Bubble Sort vs Merge Sort)
+
+| Алгоритм    | Размер   | Тип массива   | Время (сек) |
+| ----------- | -------- | --------------- | ----------- |
+| Bubble Sort | 100      | random          | 0.00036     |
+| Merge Sort  | 100      | random          | 0.00038     |
+| Bubble Sort | 1 000    | random          | 0.05278     |
+| Merge Sort  | 1 000    | random          | 0.00213     |
+| Bubble Sort | 10 000   | random          | 4.78284     |
+| Merge Sort  | 10 000   | random          | 0.02052     |
+| Bubble Sort | 100      | sorted          | 0.00001     |
+| Merge Sort  | 100      | sorted          | 0.00011     |
+| Bubble Sort | 1 000    | sorted          | 0.00005     |
+| Merge Sort  | 1 000    | sorted          | 0.00108     |
+| Bubble Sort | 10 000   | sorted          | 0.00052     |
+| Merge Sort  | 10 000   | sorted          | 0.01350     |
+| Bubble Sort | 100      | reversed        | 0.00046     |
+| Merge Sort  | 100      | reversed        | 0.00012     |
+| Bubble Sort | 1 000    | reversed        | 0.05232     |
+| Merge Sort  | 1 000    | reversed        | 0.00117     |
+| Bubble Sort | 10 000   | reversed        | 5.23491     |
+| Merge Sort  | 10 000   | reversed        | 0.01697     |
+| Bubble Sort | 100      | nearly_sorted   | 0.00022     |
+| Merge Sort  | 100      | nearly_sorted   | 0.00011     |
+| Bubble Sort | 1 000    | nearly_sorted   | 0.02954     |
+| Merge Sort  | 1 000    | nearly_sorted   | 0.00173     |
+| Bubble Sort | 10 000   | nearly_sorted   | 2.73599     |
+| Merge Sort  | 10 000   | nearly_sorted   | 0.02469     |
+| Bubble Sort | 100      | duplicates      | 0.00027     |
+| Merge Sort  | 100      | duplicates      | 0.00011     |
+| Bubble Sort | 1 000    | duplicates      | 0.03871     |
+| Merge Sort  | 1 000    | duplicates      | 0.00139     |
+| Bubble Sort | 10 000   | duplicates      | 3.52049     |
+| Merge Sort  | 10 000   | duplicates      | 0.02547     |
+
+## Большие размеры (только Merge Sort)
+
+| Алгоритм   | Размер     | Тип массива   | Время (сек) |
+| ---------- | ---------- | --------------- | ----------- |
+| Merge Sort | 100 000    | random          | 0.25669     |
+| Merge Sort | 1 000 000  | random          | 3.49710     |
+| Merge Sort | 100 000    | sorted          | 0.17510     |
+| Merge Sort | 1 000 000  | sorted          | 2.52812     |
+| Merge Sort | 100 000    | reversed        | 0.17515     |
+| Merge Sort | 1 000 000  | reversed        | 2.38222     |
+| Merge Sort | 100 000    | nearly_sorted   | 0.23804     |
+| Merge Sort | 1 000 000  | nearly_sorted   | 3.56012     |
+| Merge Sort | 100 000    | duplicates      | 0.20532     |
+| Merge Sort
+
+
 ## Тестирование
 
 Тесты написаны с использованием pytest. Они не зависят от времени и проверяют граничные случаи (пустые массивы, дубликаты, отрицательные числа, неверные типы данных, работу параметра seed и выброс исключений). 
